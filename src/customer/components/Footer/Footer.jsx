@@ -90,24 +90,15 @@ const Footer = () => {
 
         </Grid>
 
-        
-        </Grid>
-        <Grid>
-                <Grid className='pt-20' item xs={12}>
-                    <Typography variant='body2' component="p" align='center'> &copy; 2024 My Company All rigths reserved.</Typography>
-                    <Typography variant='body2' component="p" align='center'>Made with Love by Me.</Typography>
-                    <Typography variant='body2' component="p" align='center'>Icon Made by{' '} 
-                    <Link href="https://www.freepik.com" color="inherit" underline='always'>Freepik</Link>
-                    {' '}
-                    from {' '}
-                    <Link href="https://www.flaticon.com/" color="inherit" underline='always'> www.flaticon.com</Link> 
+        <Grid className='pt-20' item xs={12}>
+        <Typography variant='body2' component="p" align='center'>Made with Love by Me.</Typography>
 
-                    </Typography>
-                 
+                    <Typography variant='body2' component="p" align='center'> &copy; 2024 My Company All rigths reserved.</Typography>
+            
 
                 </Grid>
-
         </Grid>
+    
 
     </div>
   )

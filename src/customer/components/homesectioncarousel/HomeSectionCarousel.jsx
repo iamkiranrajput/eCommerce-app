@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import AliceCarousel from 'react-alice-carousel';
 import HomesectionCard from '../homesectioncard/HomesectionCard';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';import { Button } from '@mui/material';
-import { mens_kurta } from '../../../Data/mens_kurta';
 
 
 // add parameter as data
@@ -36,7 +35,7 @@ const items= data.slice(0,10).map((item)=><HomesectionCard product={item} />);
       <h2 className='text-2x1 font-extrabold text-gray-800 py-5'>{sectionName}</h2>
       <div className='relative p-5'>
         <AliceCarousel items={items}
-         disableButtonsControls
+        //  disableButtonsControls
           disableDotsControls
            responsive={responsive}
             onSlideChanged={syncActiveIndex}

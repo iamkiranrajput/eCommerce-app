@@ -272,17 +272,7 @@ export default function Navigation() {
                   </div>
                 </div>
 
-                <div className="border-t border-gray-200 px-4 py-6">
-                  <a href="#" className="-m-2 flex items-center p-2">
-                    <img
-                      src="https://tailwindui.com/img/flags/flag-canada.svg"
-                      alt=""
-                      className="block h-auto w-5 flex-shrink-0"
-                    />
-                    <span className="ml-3 block text-base font-medium text-gray-900">CAD</span>
-                    <span className="sr-only">, change currency</span>
-                  </a>
-                </div>
+              
               </Dialog.Panel>
             </Transition.Child>
           </div>
@@ -312,8 +302,8 @@ export default function Navigation() {
                 <a href="#">
                   <span className="sr-only">Your Company</span>
                   <img
+                    src="./logo.png"
                     className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
                     alt=""
                   />
                 </a>
@@ -430,17 +420,7 @@ export default function Navigation() {
                   </a>
                 </div>
 
-                <div className="hidden lg:ml-8 lg:flex">
-                  <a href="#" className="flex items-center text-gray-700 hover:text-gray-800">
-                    <img
-                      src="https://tailwindui.com/img/flags/flag-canada.svg"
-                      alt=""
-                      className="block h-auto w-5 flex-shrink-0"
-                    />
-                    <span className="ml-3 block text-sm font-medium">CAD</span>
-                    <span className="sr-only">, change currency</span>
-                  </a>
-                </div>
+               
 
                 {/* Search */}
                 <div className="flex lg:ml-6">
