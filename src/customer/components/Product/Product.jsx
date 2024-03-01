@@ -8,7 +8,7 @@ import ProductCard from './ProductCard'
 import { FormControl, FormControlLabel, FormLabel, Radio, RadioGroup, colors } from '@mui/material'
 import { color, filters, singleFilters } from './FileterData'
 import FilterListIcon from '@mui/icons-material/FilterList';
-import { Navigate, useLocation, useNavigate} from 'react-router-dom'
+import { useLocation, useNavigate} from 'react-router-dom'
 
 const sortOptions = [
   { name: 'Most Popular', href: '#', current: true },
@@ -68,31 +68,42 @@ function classNames(...classes) {
 
 export default function Product() {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
+
   const location = useLocation();
   const navigate = useNavigate(); // Corrected: should be useNavigate instead of Navigate
 
   const handleFilter = (value, sectionId) => {
-    const searchParams = new URLSearchParams(location.search);
+    const searchParamms = new URLSearchParams(location.search);
 
-    let filterValue = searchParams.getAll(sectionId);
+    let filterValue = searchParamms.getAll(sectionId);
 
     if (filterValue.length > 0 && filterValue[0].split(",").includes(value)) {
       filterValue = filterValue[0].split(",").filter((item) => item !== value);
 
       if (filterValue.length === 0) {
-        searchParams.delete(sectionId);
-      } else {
+        searchParamms.delete(sectionId);
+      } 
+    }
+      
+      else {
         filterValue.push(value);
       }
 
       if (filterValue.length > 0) {
-        searchParams.set(sectionId, filterValue.join(","));
-        const query = searchParams.toString();
-        navigate({search:`?${query}`}); // Corrected: using navigate instead of Navigate
+        searchParamms.set(sectionId, filterValue.join(","));
+      
       }
-    }
+      const query = searchParamms.toString();
+      navigate({search:`?${query}`}); 
+    
   };
 
+  const handleRadioFilterChange=(e,sectionId)=>{
+    const searchParamms = new URLSearchParams(location.search);
+    searchParamms.set(sectionId,e.target.value);
+    const query = searchParamms.toString();
+    navigate({search:`?${query}`}); 
+  }
 
 
   return (
@@ -376,7 +387,7 @@ export default function Product() {
                               >
                             {section.options.map((option, optionIdx) => (
                              <>
-                             <FormControlLabel value={option.value} control={<Radio />} label={option.label} />
+                             <FormControlLabel onChange={(e)=>handleRadioFilterChange(e,section.id)} value={option.value} control={<Radio />} label={option.label} />
 
 
                              </>
