@@ -20,13 +20,17 @@ This is an E-Commerce Web Application project built with React.js for the fronte
 
 ## Setup Instructions
 1. Clone the repository:
-  ``` git clone https://github.com/iamkiranrajput/ecommerce-app.git
+  ```
+git clone https://github.com/iamkiranrajput/ecommerce-app.git
  ```
 
 3. Navigate to the project directory:
 -cd e-commerce-web-app
+```
+cd e-commerce-web-app
+```
 
-4. Frontend Setup:
+5. Frontend Setup:
 - Navigate to the `frontend` directory:
   ```
   cd frontend
