@@ -25,16 +25,10 @@ git clone https://github.com/iamkiranrajput/ecommerce-app.git
  ```
 
 3. Navigate to the project directory:
--cd e-commerce-web-app
 ```
 cd e-commerce-web-app
 ```
 
-5. Frontend Setup:
-- Navigate to the `frontend` directory:
-  ```
-  cd frontend
-  ```
 - Install dependencies:
   ```
   npm install
