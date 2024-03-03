@@ -70,34 +70,38 @@ export default function Product() {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
 
   const location = useLocation();
-  const navigate = useNavigate(); // Corrected: should be useNavigate instead of Navigate
+  const navigate = useNavigate(); 
+
+
+
 
   const handleFilter = (value, sectionId) => {
     const searchParamms = new URLSearchParams(location.search);
-
     let filterValue = searchParamms.getAll(sectionId);
+    console.log(value);
 
-    if (filterValue.length > 0 && filterValue[0].split(",").includes(value)) {
-      filterValue = filterValue[0].split(",").filter((item) => item !== value);
+    console.log(sectionId)
+
+    
+    if (filterValue.length>0 && filterValue[0].split(",").includes(value)) {
+      filterValue = filterValue[0].split(",").filter((item)=>item!==value);
 
       if (filterValue.length === 0) {
-        searchParamms.delete(sectionId);
+        searchParamms.delete(sectionId)
       } 
-    }
-      
+    } 
       else {
         filterValue.push(value);
       }
 
-      if (filterValue.length > 0) {
+      if (filterValue.length>0) {
         searchParamms.set(sectionId, filterValue.join(","));
-      
       }
-      const query = searchParamms.toString();
-      navigate({search:`?${query}`}); 
-    
-  };
 
+      const query = searchParamms.toString();
+      navigate({search:`?${query}`})
+
+  }
   const handleRadioFilterChange=(e,sectionId)=>{
     const searchParamms = new URLSearchParams(location.search);
     searchParamms.set(sectionId,e.target.value);
@@ -105,7 +109,7 @@ export default function Product() {
     navigate({search:`?${query}`}); 
   }
 
-
+  
   return (
     <div className="bg-white">
       <div>
@@ -338,7 +342,9 @@ export default function Product() {
                           <div className="space-y-4">
                             {section.options.map((option, optionIdx) => (
                               <div key={option.value} className="flex items-center">
-                                <input
+                              <input
+                                    onChange={() => handleFilter(option.value, section.id)}
+
                                   id={`filter-${section.id}-${optionIdx}`}
                                   name={`${section.id}[]`}
                                   defaultValue={option.value}
@@ -360,6 +366,7 @@ export default function Product() {
                     )}
                   </Disclosure>
                 ))}
+
                 {singleFilters.map((section) => (
                   <Disclosure as="div" key={section.id} className="border-b border-gray-200 py-6">
                     {({ open }) => (

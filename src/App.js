@@ -11,7 +11,7 @@ function App() {
 
     <div>
     {/* <Homepages/> */}
-    {/* <Product/> */}
+    {/* <Product/>   */}
     <ProductDetails/>
     </div>
 
