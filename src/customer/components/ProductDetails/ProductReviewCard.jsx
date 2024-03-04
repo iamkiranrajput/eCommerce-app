@@ -10,7 +10,7 @@ function ProductReviewCard() {
                 </Box>
 
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={10}>
                 <div className='space-y-2'>
                     <div>
                         <p className='font-semibold text-lg'>Karn</p>
