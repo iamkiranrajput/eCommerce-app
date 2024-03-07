@@ -17,7 +17,7 @@ This is an E-Commerce Web Application project built with React.js for the fronte
 - Material-UI: A React UI framework for designing attractive and responsive web applications.
 - Tailwind CSS: A utility-first CSS framework for creating custom designs quickly.
 - Maven: A build automation tool primarily used for Java projects.
-
+ 
 ## Setup Instructions
 1. Clone the repository:
   ```
