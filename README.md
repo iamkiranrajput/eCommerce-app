@@ -11,13 +11,13 @@ This is an E-Commerce Web Application project built with React.js for the fronte
 - Order Management: Allow users to view their order history and track current orders.
 - Admin Panel: Provide administrative capabilities such as managing products, orders, and user accounts.
 
-## Technologies Used
+## Technologies Used 
 - React.js: A JavaScript library for building user interfaces.
 - Spring Boot: A Java-based framework for building web applications and microservices.
 - Material-UI: A React UI framework for designing attractive and responsive web applications.
 - Tailwind CSS: A utility-first CSS framework for creating custom designs quickly.
 - Maven: A build automation tool primarily used for Java projects.
-
+ 
 ## Setup Instructions
 1. Clone the repository:
   ```
