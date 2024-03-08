@@ -1,6 +1,6 @@
 import React from 'react'
 
-function AddressCard() {
+const AddressCard=()=>{
   return (
     <div>
         <div className='space-y3'>
