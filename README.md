@@ -20,7 +20,7 @@ This is an E-Commerce Web Application project built with React.js for the fronte
  
 ## Setup Instructions
 1. Clone the repository:
-  ```
+  ``` 
 git clone https://github.com/iamkiranrajput/ecommerce-app.git
  ```
 
